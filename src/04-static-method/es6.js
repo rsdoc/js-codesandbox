@@ -1,6 +1,18 @@
 console.log("[ es6 method override ]");
 
 class Alert {
+  // this may be added in future
+  // static createAlert = function(type, title) {
+  //   switch (type) {
+  //     case "Success":
+  //       return new SuccessAlert(title);
+  //     case "Failure":
+  //       return new FailureAlert(title);
+  //     default:
+  //       return new Alert(title);
+  //   }
+  // };
+
   constructor(title) {
     this.title = title || "Default Alert";
   }
