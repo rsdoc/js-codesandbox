@@ -1,2 +1,2 @@
-import "./es5";
-// import "./es6";
+// import "./es5";
+import "./es6";
