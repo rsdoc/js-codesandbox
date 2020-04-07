@@ -2,16 +2,16 @@ console.log("[ es6 method override ]");
 
 class Alert {
   // this may be added in future
-  // static createAlert = function(type, title) {
-  //   switch (type) {
-  //     case "Success":
-  //       return new SuccessAlert(title);
-  //     case "Failure":
-  //       return new FailureAlert(title);
-  //     default:
-  //       return new Alert(title);
-  //   }
-  // };
+  static createAlert(type, title) {
+    switch (type) {
+      case "Success":
+        return new SuccessAlert(title);
+      case "Failure":
+        return new FailureAlert(title);
+      default:
+        return new Alert(title);
+    }
+  }
 
   constructor(title) {
     this.title = title || "Default Alert";
@@ -50,16 +50,16 @@ class FailureAlert extends Alert {
 
 // creating the static method is same as es5
 // static methods are directly assigned to the class
-Alert.createAlert = function(type, title) {
-  switch (type) {
-    case "Success":
-      return new SuccessAlert(title);
-    case "Failure":
-      return new FailureAlert(title);
-    default:
-      return new Alert(title);
-  }
-};
+// Alert.createAlert = function(type, title) {
+//   switch (type) {
+//     case "Success":
+//       return new SuccessAlert(title);
+//     case "Failure":
+//       return new FailureAlert(title);
+//     default:
+//       return new Alert(title);
+//   }
+// };
 
 // instantiate the constructor function based on type
 
