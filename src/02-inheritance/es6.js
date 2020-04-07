@@ -15,6 +15,15 @@ class Alert {
   }
 }
 
-const alert = new Alert("Success");
+// create derived class and inheriting the Alert Class
+class SuccessAlert extends Alert {
+  constructor(title) {
+    // calling Alert constructor function
+    super(title);
+    this.type = "success";
+  }
+}
 
-console.log(alert.logData());
+const sa = new SuccessAlert("Success Alert");
+
+console.log(sa.toString());
