@@ -1,4 +1,4 @@
-console.log("[es5 constructor function]");
+console.log("[ es5 inheritance ]");
 
 /**
  * By convention - keep function name as Capitalize.
@@ -25,11 +25,17 @@ function Alert(title) {
    */
 }
 
+// all istances will have ref to this method
 Alert.prototype.logData = function() {
-  console.log("[Logger - Alert - log Data] - ", this.title);
+  console.log("[ logData - (Alert) ] - ", this.title);
+};
+
+Alert.prototype.toString = function() {
+  return `[ toString - (Alert) ] - ${this.title}`;
 };
 
 // creating instance of constructor function
-const alert = new Alert();
+const alert = new Alert("Success toast");
 
 console.log(alert.logData());
+console.log(alert.toString());

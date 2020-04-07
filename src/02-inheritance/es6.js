@@ -1,4 +1,4 @@
-console.log("[es6 constructor function]");
+console.log("[ es6 inheritance ]");
 
 // es6 way of creating constructor function
 class Alert {
@@ -7,7 +7,11 @@ class Alert {
   }
 
   logData() {
-    console.log("[Logger - Alert - log Data] - ", this.title);
+    console.log("[ logData - (Alert) ] - ", this.title);
+  }
+
+  toString() {
+    return `[ toString - (Alert) ] - ${this.title}`;
   }
 }
 
