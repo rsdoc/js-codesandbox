@@ -1,1 +1,1 @@
-console.log("[ Welcome from Index.js]");
+console.log("[ Welcome f   rom Index.js]");
